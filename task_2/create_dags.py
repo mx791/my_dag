@@ -9,7 +9,6 @@ import json
 BASE_DIR = "/opt/airflow/dags"
 dependancy_graph = json.load(open(BASE_DIR + "/task_1/data.json"))
 
-
 def create_dag(model, deps):
 
     dag = DAG(
