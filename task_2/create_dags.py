@@ -20,9 +20,9 @@ def create_dag(model, deps):
 
     globals()[model] = dag
 
-    model_task = EmptyOperator(model, dag=dag)
+    model_task = EmptyOperator(task_id=model, dag=dag)
     for dep in deps:
-        etl_task = EmptyOperator(dep, dag=dag)
+        etl_task = EmptyOperator(task_id=dep, dag=dag)
         etl_task >> model_task
  
 
