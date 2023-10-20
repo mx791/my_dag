@@ -9,9 +9,9 @@ BASE_DIR = "/opt/airflow/dags"
 dependancy_graph = json.load(open(BASE_DIR + "/task_1/data.json"))
 
 dag = DAG(
-    dag_id="load_json",
+    dag_id="I_MAD",
     start_date=datetime.datetime(2023,10,18),
-    #schedule="@daily",
+    schedule="@daily",
 )
 
 setup = SSHOperator(task_id="setup", dag=dag, ssh_conn_id="ssh_server", command="hostname")
