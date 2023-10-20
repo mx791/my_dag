@@ -1,0 +1,7 @@
+{
+    "MODEL_1": ["ETL_1", "ETL_2", "ETL_3"],
+    "MODEL_2": ["ETL_1", "ETL_3"],
+    "MODEL_3": ["ETL_2", "ETL_4", "ETL_1"],
+    "MODEL_4": ["ETL_3", "ETL_6", "ETL_1"],
+    "MODEL_5": ["ETL_3"]
+}
