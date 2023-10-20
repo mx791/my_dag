@@ -13,10 +13,12 @@ dependancy_graph = json.load(open(BASE_DIR + "/task_1/data.json"))
 def create_dag(model, deps):
 
     dag = DAG(
-        dag_id=model,
+        dag_id="IMAD_" + model,
         start_date=datetime.datetime(2023,10,18),
         #schedule="@daily",
     )
+
+    globals()[model] = dag
 
     model_task = EmptyOperator(model, dag=dag)
     for dep in deps:
